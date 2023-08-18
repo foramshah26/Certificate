@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include certi *.css
+recursive-include certi *.csv
+recursive-include certi *.html
+recursive-include certi *.ico
+recursive-include certi *.js
+recursive-include certi *.json
+recursive-include certi *.md
+recursive-include certi *.png
+recursive-include certi *.py
+recursive-include certi *.svg
+recursive-include certi *.txt
+recursive-exclude certi *.pyc

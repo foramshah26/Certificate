@@ -1,0 +1,230 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:.DD.-.MM.-.YY.-",
+ "creation": "2022-10-13 16:18:47.991882",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "first_name",
+  "last_name",
+  "image",
+  "column_break_3",
+  "full_name",
+  "date_of_birth",
+  "gender",
+  "contact_details_section",
+  "email_id",
+  "column_break_7",
+  "mobile_number",
+  "tab_break_11",
+  "present_address",
+  "address_line_1p",
+  "address_line_2p",
+  "zip1",
+  "same_as_present_address",
+  "column_break_15",
+  "address_line_1",
+  "address_line_2",
+  "zip2",
+  "personal_details_tab",
+  "occupation",
+  "blood_group",
+  "column_break_21",
+  "type_of_document",
+  "id_proof"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": ".DD.-.MM.-"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Your Photo"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "in_preview": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email ID",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_break_11",
+   "fieldtype": "Tab Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Column Break",
+   "label": "Present Address"
+  },
+  {
+   "fieldname": "address_line_1p",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2p",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "zip1",
+   "fieldtype": "Data",
+   "label": "Zip Code"
+  },
+  {
+   "default": "0",
+   "description": "Check Box if u have same Permanent address as Present address",
+   "fieldname": "same_as_present_address",
+   "fieldtype": "Check",
+   "label": "Same As present Address"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break",
+   "label": "Permanent Address"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "zip2",
+   "fieldtype": "Data",
+   "label": "Zip Code"
+  },
+  {
+   "fieldname": "personal_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_document",
+   "fieldtype": "Select",
+   "label": "Type Of Document",
+   "options": "\nAadhar Card\nPan Card\nVoter ID"
+  },
+  {
+   "depends_on": "eval:doc.type_of_document == 'Aadhar Card'||doc.type_of_document == 'Pan Card'||doc.type_of_document == 'Voter ID';",
+   "fieldname": "id_proof",
+   "fieldtype": "Attach",
+   "label": "Id Proof"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Library Membership",
+   "link_fieldname": "member"
+  },
+  {
+   "link_doctype": "Library Transaction",
+   "link_fieldname": "member"
+  }
+ ],
+ "modified": "2022-10-19 13:41:54.377169",
+ "modified_by": "Administrator",
+ "module": "Certi",
+ "name": "Library Member",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
